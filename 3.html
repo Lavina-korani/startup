@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Teacher Assistant</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; padding: 20px; background-color: #f5f5f5; }
+    h1 { text-align: center; color: #333; }
+    .assignment { background-color: white; border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+    .btn { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px; transition: background-color 0.3s ease; }
+    .btn:hover { background-color: #45a049; }
+    .feedback { margin-top: 10px; color: #555; font-style: italic; }
+    .container { max-width: 800px; margin: auto; }
+    .chatbot { margin-top: 20px; padding: 15px; background-color: white; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+    #chatInput { width: 100%; padding: 10px; margin-top: 10px; }
+    #chatOutput { margin-top: 10px; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>AI Teacher Assistant</h1>
+
+  <div class="container" id="assignments"></div>
+
+  <div class="chatbot">
+    <h2>AI Doubt Solver</h2>
+    <input type="text" id="chatInput" placeholder="Ask your question..." onkeypress="handleChat(event)">
+    <p id="chatOutput"></p>
+  </div>
+
+  <script>
+    const assignments = [
+      { id: 1, student: 'Alice', submission: 'Great work on the essay, but needs better structure.' },
+      { id: 2, student: 'Bob', submission: 'Excellent problem-solving skills but lacks clarity in explanation.' },
+      { id: 3, student: 'John', submission: 'Good in e-mail writing but needs more vocabulary.' },
+      { id: 4, student: 'Stark', submission: 'Great in speech but needs to increase confidence.' }
+    ];
+
+    const generateFeedback = (submission) => {
+      if (submission.toLowerCase().includes('great')) {
+        return 'Excellent work! Keep it up.';
+      } else if (submission.toLowerCase().includes('problem-solving')) {
+        return 'Good effort on problem-solving. Try to improve clarity.';
+      } else if (submission.toLowerCase().includes('good')) {
+        return 'It works well but needs some improvement.';
+      } else {
+        return 'Good attempt. Focus on structure and clarity.';
+      }
+    };
+
+    const handleGrading = (id, submission) => {
+      const feedback = generateFeedback(submission);
+      const feedbackElement = document.getElementById(`feedback-${id}`);
+      feedbackElement.textContent = `Feedback: ${feedback}`;
+    };
+
+    const renderAssignments = () => {
+      const container = document.getElementById('assignments');
+      container.innerHTML = '';
+
+      assignments.forEach(assignment => {
+        container.innerHTML += `
+          <div class="assignment">
+            <p><strong>Student:</strong> ${assignment.student}</p>
+            <p><strong>Submission:</strong> ${assignment.submission}</p>
+            <button class="btn" onclick="handleGrading(${assignment.id}, '${assignment.submission.replace(/'/g, "\\'")}')">Generate Feedback</button>
+            <p id="feedback-${assignment.id}" class="feedback"></p>
+          </div>
+        `;
+      });
+    };
+
+    const handleChat = (event) => {
+      if (event.key === 'Enter') {
+        const input = document.getElementById('chatInput').value;
+        const outputElement = document.getElementById('chatOutput');
+        const response = getAIResponse(input);
+        outputElement.textContent = response;
+        document.getElementById('chatInput').value = '';
+      }
+    };
+
+    const getAIResponse = (input) => {
+      const lowerInput = input.toLowerCase();
+      if (lowerInput.includes('essay')) return 'Focus on structure and clarity in your essay writing and you can create an essay based on current situations.';
+      if (lowerInput.includes('vocabulary')) return 'Expand your vocabulary by reading more diverse content and use dictionary to improve it.';
+      if (lowerInput.includes('confidence')) return 'Practice speaking in front of a mirror or with friends to boost confidence.';
+      return 'I am here to help! Please ask another question.';
+    };
+
+    renderAssignments();
+  </script>
+</body>
+</html>
