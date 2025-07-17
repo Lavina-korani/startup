@@ -1,0 +1,71 @@
+[
+  {
+    "id": "1",
+    "courseId": "1",
+    "title": "HTML & CSS Quiz",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What does HTML stand for?",
+        "options": [
+          "HyperText Markup Language",
+          "High Tech Modern Language",
+          "Home Tool Markup Language",
+          "Hyperlink and Text Markup Language"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "2",
+        "question": "Which CSS property is used to change the text color?",
+        "options": [
+          "color",
+          "text-color",
+          "font-color",
+          "text-style"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "3",
+        "question": "What is the correct HTML element for the largest heading?",
+        "options": [
+          "<heading>",
+          "<h6>",
+          "<h1>",
+          "<head>"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "courseId": "2",
+    "title": "Python Basics Quiz",
+    "questions": [
+      {
+        "id": "1",
+        "question": "Which of the following is the correct way to create a list in Python?",
+        "options": [
+          "list = []",
+          "list = ()",
+          "list = {}",
+          "list = ||"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "2",
+        "question": "What is the output of print(2 ** 3)?",
+        "options": [
+          "6",
+          "8",
+          "9",
+          "5"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - EduHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduHub</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </div>
+
+            <div class="nav-auth">
+                <div class="user-menu" id="user-menu">
+                    <span id="user-name">Loading...</span>
+                    <button class="btn btn-outline" id="logout-btn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <!-- Quiz Header -->
+        <div class="quiz-header">
+            <h1 id="quiz-title">Loading Quiz...</h1>
+            <div class="quiz-info">
+                <div class="quiz-progress">
+                    <span id="current-question">1</span> of <span id="total-questions">5</span>
+                </div>
+                <div class="quiz-timer" id="quiz-timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer-display">05:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="quiz-progress-bar">
+            <div class="progress" id="quiz-progress" style="width: 20%"></div>
+        </div>
+
+        <!-- Question Container -->
+        <div class="question-container" id="question-container">
+            <!-- Questions will be loaded dynamically -->
+        </div>
+
+        <!-- Quiz Navigation -->
+        <div class="quiz-navigation">
+            <button class="btn btn-outline" id="prev-btn" disabled>
+                <i class="fas fa-arrow-left"></i>
+                Previous
+            </button>
+            
+            <div class="question-dots" id="question-dots">
+                <!-- Dots will be generated dynamically -->
+            </div>
+            
+            <button class="btn btn-primary" id="next-btn">
+                Next
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Quiz Actions -->
+        <div class="quiz-actions">
+            <button class="btn btn-outline" id="save-exit-btn">
+                <i class="fas fa-save"></i>
+                Save & Exit
+            </button>
+            <button class="btn btn-success" id="submit-quiz-btn" style="display: none;">
+                <i class="fas fa-check"></i>
+                Submit Quiz
+            </button>
+        </div>
+    </div>
+
+    <!-- Quiz Results Modal -->
+    <div id="results-modal" class="modal">
+        <div class="modal-content quiz-results">
+            <div class="results-header">
+                <h2>Quiz Results</h2>
+                <div class="score-circle">
+                    <div class="score-value" id="final-score">85%</div>
+                    <div class="score-label">Your Score</div>
+                </div>
+            </div>
+            
+            <div class="results-summary">
+                <div class="result-stat">
+                    <div class="stat-number" id="correct-answers">8</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="result-stat">
+                    <div class="stat-number" id="incorrect-answers">2</div>
+                    <div class="stat-label">Incorrect</div>
+                </div>
+                <div class="result-stat">
+                    <div class="stat-number" id="time-taken">4:32</div>
+                    <div class="stat-label">Time</div>
+                </div>
+            </div>
+
+            <div class="results-details" id="results-details">
+                <!-- Detailed results will be shown here -->
+            </div>
+
+            <div class="results-actions">
+                <button class="btn btn-outline" id="review-answers">Review Answers</button>
+                <button class="btn btn-primary" id="continue-learning">Continue Learning</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+        <p>Loading Quiz...</p>
+    </div>
+
+    <script src="quiz.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

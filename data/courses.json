@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "Introduction to Web Development",
+    "description": "Learn the basics of HTML, CSS, and JavaScript",
+    "instructor": "teacher1",
+    "duration": "8 weeks",
+    "level": "Beginner",
+    "category": "Programming",
+    "thumbnail": "https://via.placeholder.com/300x200?text=Web+Development",
+    "lessons": [
+      {
+        "id": "1",
+        "title": "HTML Basics",
+        "duration": "45 min",
+        "videoUrl": "https://www.youtube.com/embed/UB1O30fR-EE",
+        "completed": false
+      },
+      {
+        "id": "2",
+        "title": "CSS Fundamentals",
+        "duration": "60 min",
+        "videoUrl": "https://www.youtube.com/embed/yfoY53QXEnI",
+        "completed": false
+      },
+      {
+        "id": "3",
+        "title": "JavaScript Introduction",
+        "duration": "75 min",
+        "videoUrl": "https://www.youtube.com/embed/hdI2bqOjy3c",
+        "completed": false
+      }
+    ],
+    "enrolled": 0,
+    "rating": 4.5,
+    "createdAt": "2025-07-17T03:53:30.274Z"
+  },
+  {
+    "id": "2",
+    "title": "Data Science Fundamentals",
+    "description": "Introduction to Python, statistics, and data analysis",
+    "instructor": "teacher1",
+    "duration": "12 weeks",
+    "level": "Intermediate",
+    "category": "Data Science",
+    "thumbnail": "https://via.placeholder.com/300x200?text=Data+Science",
+    "lessons": [
+      {
+        "id": "1",
+        "title": "Python Basics",
+        "duration": "50 min",
+        "videoUrl": "https://www.youtube.com/embed/_uQrJ0TkZlc",
+        "completed": false
+      },
+      {
+        "id": "2",
+        "title": "NumPy and Pandas",
+        "duration": "65 min",
+        "videoUrl": "https://www.youtube.com/embed/vmEHCJofslg",
+        "completed": false
+      },
+      {
+        "id": "3",
+        "title": "Data Visualization",
+        "duration": "55 min",
+        "videoUrl": "https://www.youtube.com/embed/UO98lJQ3QGI",
+        "completed": false
+      }
+    ],
+    "enrolled": 0,
+    "rating": 4.8,
+    "createdAt": "2025-07-17T03:53:30.274Z"
+  },
+  {
+    "id": "3",
+    "title": "Digital Marketing Mastery",
+    "description": "Complete guide to digital marketing strategies and tools",
+    "instructor": "teacher1",
+    "duration": "6 weeks",
+    "level": "Beginner",
+    "category": "Marketing",
+    "thumbnail": "https://via.placeholder.com/300x200?text=Digital+Marketing",
+    "lessons": [
+      {
+        "id": "1",
+        "title": "Marketing Fundamentals",
+        "duration": "40 min",
+        "videoUrl": "https://www.youtube.com/embed/nU-IIXBWlS4",
+        "completed": false
+      },
+      {
+        "id": "2",
+        "title": "Social Media Marketing",
+        "duration": "50 min",
+        "videoUrl": "https://www.youtube.com/embed/LiNlBjSHV5o",
+        "completed": false
+      },
+      {
+        "id": "3",
+        "title": "SEO Basics",
+        "duration": "45 min",
+        "videoUrl": "https://www.youtube.com/embed/xsVTqzratPs",
+        "completed": false
+      }
+    ],
+    "enrolled": 0,
+    "rating": 4.3,
+    "createdAt": "2025-07-17T03:53:30.274Z"
+  }
+]

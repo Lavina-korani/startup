@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EduHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduHub</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">My Courses</a>
+                <a href="#" class="nav-link">Certificates</a>
+                <a href="#" class="nav-link">Progress</a>
+            </div>
+
+            <div class="nav-auth">
+                <div class="user-menu" id="user-menu">
+                    <span id="user-name">Loading...</span>
+                    <button class="btn btn-outline" id="logout-btn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="container">
+            <h1>Welcome back, <span id="welcome-name">Student</span>!</h1>
+            <p>Continue your learning journey</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-content">
+        <div class="container">
+            <!-- Statistics Cards -->
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="enrolled-courses">0</h3>
+                        <p>Enrolled Courses</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="completed-lessons">0</h3>
+                        <p>Lessons Completed</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="certificates-earned">0</h3>
+                        <p>Certificates Earned</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-hours">0</h3>
+                        <p>Hours Learned</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Courses -->
+            <div class="dashboard-section">
+                <h2>Continue Learning</h2>
+                <div class="current-courses" id="current-courses">
+                    <!-- Courses will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Learning Progress -->
+            <div class="dashboard-section">
+                <h2>Learning Progress</h2>
+                <div class="progress-section">
+                    <div class="progress-charts">
+                        <div class="chart-container">
+                            <h3>Weekly Activity</h3>
+                            <canvas id="weekly-chart" width="400" height="200"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Subject Progress</h3>
+                            <div class="subject-progress" id="subject-progress">
+                                <!-- Progress bars will be generated -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommended Courses -->
+            <div class="dashboard-section">
+                <h2>Recommended for You</h2>
+                <div class="recommended-courses" id="recommended-courses">
+                    <!-- Recommended courses will be loaded -->
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="dashboard-section">
+                <h2>Recent Activity</h2>
+                <div class="activity-feed" id="activity-feed">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><strong>Completed lesson:</strong> HTML Basics</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><strong>Enrolled in:</strong> Introduction to Web Development</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><strong>Quiz completed:</strong> HTML & CSS Quiz - Score: 85%</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+        <button class="quick-action-btn" id="browse-courses">
+            <i class="fas fa-search"></i>
+            Browse Courses
+        </button>
+        <button class="quick-action-btn" id="take-quiz">
+            <i class="fas fa-question-circle"></i>
+            Take Quiz
+        </button>
+        <button class="quick-action-btn" id="view-certificates">
+            <i class="fas fa-award"></i>
+            Certificates
+        </button>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
