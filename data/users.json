@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "username": "student1",
+    "email": "student@example.com",
+    "password": "$2a$10$fdQoNOgfxlThtewSMHji9u7u8fAToOaiKq3R5PXRnfRFRnjfUDUTW",
+    "role": "student",
+    "createdAt": "2025-07-17T03:53:30.203Z"
+  },
+  {
+    "id": "2",
+    "username": "teacher1",
+    "email": "teacher@example.com",
+    "password": "$2a$10$LOAIvcHH4eeOdecZ2AoIt.5RSIBU1kG3kzy34CkNCjwSoEhdFMeMO",
+    "role": "teacher",
+    "createdAt": "2025-07-17T03:53:30.274Z"
+  }
+]
